@@ -1,0 +1,24 @@
+{
+  "name": "mysqldum-upload-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waqas740/mysqldum-upload-s3.git"
+  },
+  "author": "waqas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waqas740/mysqldum-upload-s3/issues"
+  },
+  "homepage": "https://github.com/waqas740/mysqldum-upload-s3#readme",
+  "dependencies": {
+    "aws-sdk": "^2.879.0",
+    "dotenv": "^8.2.0",
+    "mysqldump": "^3.2.0"
+  }
+}
