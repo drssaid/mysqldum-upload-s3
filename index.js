@@ -3,6 +3,10 @@ const fs= require('fs');
 const {backup} = require('./backup');
 const s3 = require('./s3');
 const {DB_USER,DB_HOST,DB_PWD,DB_DATABASE,DB_USER_WP,DB_HOST_WP,DB_PWD_WP,DB_DATABASE_WP} = process.env
+var cron = require('node-cron');
+
+
+
 const dentalChatBackup = async()=>{
     const  {filename,path,now} = await backup({
         user: DB_USER,
@@ -39,4 +43,8 @@ const job = async(time = 1000)=>{
         
     },time);
 }
-job();
+cron.schedule('* * */23 * *', () => {
+    job();
+});
+
+
